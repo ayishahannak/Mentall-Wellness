@@ -1,0 +1,133 @@
+/* =========================
+   Journal Page
+========================= */
+
+.journal-page {
+    background-color: #f8f5ef;
+    padding: 40px 20px;
+}
+
+
+/* =========================
+   Title
+========================= */
+
+.journal-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.journal-title h1 {
+    color: #293b45;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.journal-title p {
+    color: #66736f;
+    font-size: 15px;
+}
+
+
+/* =========================
+   Write Box
+========================= */
+
+.journal-write {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    background-color: #ffffff;
+    border: 1px solid #e8e2d9;
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.journal-write textarea {
+    width: 100%;
+    border: 1px solid #e8e2d9;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 14px;
+    color: #4c5b60;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.journal-write textarea:focus {
+    outline: none;
+    border-color: #477d72;
+}
+
+.journal-save {
+    display: block;
+    margin: 14px auto 0;
+    background-color: #477d72;
+    color: #ffffff;
+    border: none;
+    padding: 9px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.journal-save:disabled {
+    background-color: #b7c4c0;
+    cursor: not-allowed;
+}
+
+
+/* =========================
+   Entries
+========================= */
+
+.journal-entries {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.journal-entries h2 {
+    color: #293b45;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.no-entries {
+    color: #66736f;
+    font-size: 14px;
+}
+
+.journal-entry {
+    background-color: #ffffff;
+    border: 1px solid #e8e2d9;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+}
+
+.entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.entry-date {
+    color: #92999b;
+    font-size: 12px;
+}
+
+.entry-delete {
+    background: none;
+    border: none;
+    color: #d4774c;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.entry-text {
+    color: #4c5b60;
+    font-size: 14px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+}

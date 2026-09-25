@@ -1,0 +1,940 @@
+/* =================================
+   DOCTOR DASHBOARD
+================================= */
+
+.doctor-dashboard {
+    min-height: 100vh;
+    padding: 45px 0 60px;
+    background-color: #f3f9fc;
+}
+
+
+/* =================================
+   DASHBOARD HEADING
+================================= */
+
+.doctor-dashboard-heading {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.doctor-dashboard-heading h2 {
+    margin: 0;
+    color: #263f45;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.doctor-dashboard-heading p {
+    margin-top: 8px;
+    margin-bottom: 0;
+    color: #40565b;
+    font-size: 15px;
+}
+
+
+/* =================================
+   DOCTOR INFORMATION CARDS
+================================= */
+
+.doctor-info-card {
+    max-width: 720px;
+
+    margin: 0 auto 28px;
+
+    border-radius: 18px !important;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 6px 20px rgba(45, 80, 90, 0.09) !important;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.doctor-info-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 9px 25px rgba(45, 80, 90, 0.12) !important;
+}
+
+
+/* =================================
+   FIRST CARD - DOCTOR INFORMATION
+================================= */
+
+.doctor-info-card:first-of-type {
+    background-color: #e8f5fa;
+
+    border: 1px solid #cfe5eb !important;
+}
+
+.doctor-info-card:first-of-type h4 {
+    color: #294b55;
+}
+
+
+/* =================================
+   SECOND CARD - DOCTOR LEAVE
+================================= */
+
+.doctor-info-card:nth-of-type(2) {
+    background-color: #eaf8f1;
+
+    border: 1px solid #cfe8dc !important;
+}
+
+.doctor-info-card:nth-of-type(2) h4 {
+    color: #294c43;
+}
+
+
+/* =================================
+   THIRD CARD - DOCTOR PROFILE
+================================= */
+
+.doctor-info-card:nth-of-type(3) {
+    background-color: #fff1e6;
+
+    border: 1px solid #f0d7c4 !important;
+
+    box-shadow:
+        0 6px 20px rgba(120, 85, 55, 0.09) !important;
+}
+
+.doctor-info-card:nth-of-type(3) h4 {
+    color: #4b3328;
+}
+
+
+/* =================================
+   CARD BODY
+================================= */
+
+.doctor-info-card .card-body {
+    padding: 27px 30px;
+}
+
+
+/* =================================
+   CARD HEADINGS
+================================= */
+
+.doctor-info-card h4 {
+    margin-bottom: 18px;
+
+    font-size: 21px;
+    font-weight: 700;
+}
+
+
+/* =================================
+   CARD TEXT
+================================= */
+
+.doctor-info-card p {
+    margin-bottom: 10px;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* Doctor Information text */
+
+.doctor-info-card:first-of-type p {
+    color: #40545a;
+}
+
+
+/* Leave text */
+
+.doctor-info-card:nth-of-type(2) p {
+    color: #405650;
+}
+
+
+/* Profile text */
+
+.doctor-info-card:nth-of-type(3) p {
+    color: #594b45;
+}
+
+
+.doctor-info-card p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =================================
+   DARK STRONG TEXT
+================================= */
+
+.doctor-info-card strong {
+    font-weight: 700;
+}
+
+
+/* First card */
+
+.doctor-info-card:first-of-type strong {
+    color: #253f46;
+}
+
+
+/* Second card */
+
+.doctor-info-card:nth-of-type(2) strong {
+    color: #29463f;
+}
+
+
+/* Third card */
+
+.doctor-info-card:nth-of-type(3) strong {
+    color: #3d302b;
+}
+
+
+/* =================================
+   LEAVE DATE INPUT
+================================= */
+
+.doctor-info-card .form-label {
+    color: #29463f;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    margin-bottom: 7px;
+}
+
+.doctor-info-card .form-control {
+    background-color: #ffffff;
+
+    border: 1px solid #c8ded7;
+
+    border-radius: 10px;
+
+    padding: 10px 12px;
+
+    color: #344b4f;
+
+    font-size: 13px;
+
+    box-shadow: none;
+}
+
+.doctor-info-card .form-control:focus {
+    background-color: #ffffff;
+
+    border-color: #77aa9e;
+
+    box-shadow:
+        0 0 0 3px rgba(76, 143, 128, 0.12);
+}
+
+
+/* =================================
+   INFORMATION CARD BUTTONS
+================================= */
+
+.doctor-info-card .btn {
+    border-radius: 9px;
+
+    padding: 9px 17px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    box-shadow: none !important;
+}
+
+
+/* =================================
+   SET ON LEAVE BUTTON
+================================= */
+
+.doctor-info-card:nth-of-type(2) .btn-danger {
+    background-color: #d78368 !important;
+
+    color: #ffffff !important;
+
+    border: none !important;
+}
+
+.doctor-info-card:nth-of-type(2) .btn-danger:hover {
+    background-color: #c66f54 !important;
+}
+
+
+/* =================================
+   CANCEL LEAVE BUTTON
+================================= */
+
+.doctor-info-card:nth-of-type(2) .btn-secondary {
+    background-color: #ffffff !important;
+
+    color: #405b58 !important;
+
+    border: 1px solid #c5dcd5 !important;
+}
+
+.doctor-info-card:nth-of-type(2) .btn-secondary:hover {
+    background-color: #f5fbf8 !important;
+
+    color: #29463f !important;
+}
+
+
+/* =================================
+   REMOVE DOCTOR BUTTON
+================================= */
+
+.doctor-info-card:nth-of-type(3) .btn-danger {
+    background-color: #c9654f !important;
+
+    color: #ffffff !important;
+
+    border: none !important;
+
+    border-radius: 9px;
+
+    padding: 10px 18px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    box-shadow: none !important;
+}
+
+.doctor-info-card:nth-of-type(3) .btn-danger:hover {
+    background-color: #ad503d !important;
+
+    transform: translateY(-1px);
+}
+
+
+/* =================================
+   APPOINTMENTS SECTION
+================================= */
+
+.doctor-appointments {
+    max-width: 1050px;
+
+    margin: 45px auto 0;
+}
+
+.doctor-appointments h3 {
+    margin-bottom: 25px;
+
+    color: #263f45;
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    text-align: center;
+}
+
+
+/* =================================
+   APPOINTMENT CARD
+================================= */
+
+.doctor-appointment-card {
+    height: 100%;
+
+    background-color: #ffffff;
+
+    border: 1px solid #dce8eb !important;
+
+    border-radius: 16px !important;
+
+    box-shadow:
+        0 5px 18px rgba(50, 100, 115, 0.08) !important;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.doctor-appointment-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(50, 100, 115, 0.13) !important;
+}
+
+
+/* =================================
+   APPOINTMENT CARD BODY
+================================= */
+
+.doctor-appointment-card .card-body {
+    padding: 22px;
+}
+
+
+/* =================================
+   PATIENT NAME
+================================= */
+
+.doctor-appointment-card h5 {
+    margin-bottom: 16px;
+
+    padding: 10px 12px;
+
+    background-color: #e7f4fa;
+
+    border-radius: 9px;
+
+    color: #294f5b;
+
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+
+/* =================================
+   APPOINTMENT DETAILS
+================================= */
+
+.doctor-appointment-card p {
+    margin-bottom: 9px;
+
+    color: #40565b;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+.doctor-appointment-card p:last-of-type {
+    margin-bottom: 0;
+}
+
+.doctor-appointment-card strong {
+    color: #263f45;
+
+    font-weight: 700;
+}
+
+
+/* =================================
+   APPOINTMENT BUTTONS
+================================= */
+
+.doctor-appointment-card .btn {
+    border-radius: 8px;
+
+    padding: 8px 13px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    box-shadow: none !important;
+}
+
+
+/* Confirm */
+
+.doctor-appointment-card .btn-success {
+    background-color: #5f9b85 !important;
+
+    color: #ffffff !important;
+
+    border: none !important;
+}
+
+.doctor-appointment-card .btn-success:hover {
+    background-color: #4d846f !important;
+}
+
+
+/* Completed */
+
+.doctor-appointment-card .btn-primary {
+    background-color: #679bad !important;
+
+    color: #ffffff !important;
+
+    border: none !important;
+}
+
+.doctor-appointment-card .btn-primary:hover {
+    background-color: #558b9e !important;
+}
+
+
+/* Cancel */
+
+.doctor-appointment-card .btn-danger {
+    background-color: #d47d63 !important;
+
+    color: #ffffff !important;
+
+    border: none !important;
+}
+
+.doctor-appointment-card .btn-danger:hover {
+    background-color: #bf674e !important;
+}
+
+
+/* =================================
+   NO APPOINTMENTS
+================================= */
+
+.no-doctor-appointments {
+    max-width: 520px;
+
+    margin: 0 auto;
+
+    padding: 25px;
+
+    text-align: center;
+
+    background-color: #fffbea;
+
+    border: 1px solid #eee2bd;
+
+    border-radius: 14px;
+
+    color: #665d48;
+
+    font-size: 14px;
+
+    box-shadow:
+        0 5px 18px rgba(120, 100, 55, 0.07);
+}
+
+
+/* =================================
+   PATIENTS & EARNINGS
+================================= */
+
+.doctor-stats {
+    max-width: 1050px;
+
+    margin: 45px auto 25px;
+
+    padding: 27px;
+
+    background-color: #fff5df;
+
+    border: 1px solid #f0dfbd;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 5px 18px rgba(130, 100, 55, 0.07);
+}
+
+
+/* =================================
+   STATS HEADER
+================================= */
+
+.stats-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-bottom: 15px;
+}
+
+.stats-header h3 {
+    margin: 0;
+
+    color: #59472c;
+
+    font-size: 19px;
+
+    font-weight: 700;
+}
+
+
+/* =================================
+   PERIOD SELECT
+================================= */
+
+.stats-header .form-select {
+    width: auto;
+
+    min-width: 125px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #dfcda8;
+
+    border-radius: 20px;
+
+    padding: 6px 30px 6px 13px;
+
+    color: #594a34;
+
+    font-size: 12px;
+
+    box-shadow: none;
+}
+
+.stats-header .form-select:focus {
+    border-color: #c9aa70;
+
+    box-shadow:
+        0 0 0 3px rgba(190, 150, 80, 0.12);
+}
+
+
+/* =================================
+   PERIOD LABEL
+================================= */
+
+.period-label {
+    margin-bottom: 15px;
+
+    color: #6e5b3c;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+/* =================================
+   STAT SUMMARY CARDS
+================================= */
+
+.stat-summary-card {
+    text-align: center;
+
+    border: none !important;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 15px rgba(100, 90, 65, 0.07) !important;
+}
+
+
+/* Completed */
+
+.stat-summary-card:first-child {
+    background-color: #e4f6ee;
+}
+
+
+/* Earnings */
+
+.stat-summary-card:last-child {
+    background-color: #ffe9d7;
+}
+
+
+/* =================================
+   STAT CARD BODY
+================================= */
+
+.stat-summary-card .card-body {
+    padding: 22px;
+}
+
+
+/* =================================
+   STAT LABEL
+================================= */
+
+.stat-label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #526663;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =================================
+   STAT NUMBER
+================================= */
+
+.stat-summary-card h4 {
+    margin: 0;
+
+    color: #347763;
+
+    font-size: 26px;
+
+    font-weight: 700;
+}
+
+.stat-summary-card:last-child h4 {
+    color: #a85f39;
+}
+
+
+/* =================================
+   MODALS
+================================= */
+
+.doctor-dashboard .modal-content {
+    border: none;
+
+    border-radius: 17px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 40px rgba(40, 80, 90, 0.17);
+}
+
+
+/* =================================
+   MODAL HEADER
+================================= */
+
+.doctor-dashboard .modal-header {
+    background-color: #e7f4fa;
+
+    border-bottom: 1px solid #d6e8ed;
+
+    padding: 18px 22px;
+}
+
+.doctor-dashboard .modal-title {
+    color: #294f5b;
+
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+
+/* =================================
+   MODAL BODY
+================================= */
+
+.doctor-dashboard .modal-body {
+    padding: 23px;
+
+    background-color: #ffffff;
+
+    color: #40565b;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+.doctor-dashboard .modal-body p {
+    margin-bottom: 12px;
+
+    color: #40565b;
+}
+
+
+/* =================================
+   MODAL FOOTER
+================================= */
+
+.doctor-dashboard .modal-footer {
+    background-color: #fff8ec;
+
+    border-top: 1px solid #eee2cf;
+
+    padding: 14px 22px;
+}
+
+.doctor-dashboard .modal-footer .btn {
+    border-radius: 8px;
+
+    padding: 8px 16px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    box-shadow: none !important;
+}
+
+
+/* =================================
+   MODAL SECONDARY BUTTON
+================================= */
+
+.doctor-dashboard .modal-footer .btn-secondary {
+    background-color: #ffffff;
+
+    color: #40565b;
+
+    border: 1px solid #d5dfdd;
+}
+
+.doctor-dashboard .modal-footer .btn-secondary:hover {
+    background-color: #f2f8f7;
+
+    color: #263f45;
+}
+
+
+/* =================================
+   MODAL DANGER BUTTON
+================================= */
+
+.doctor-dashboard .modal-footer .btn-danger {
+    background-color: #c9654f !important;
+
+    color: #ffffff !important;
+
+    border: none !important;
+}
+
+.doctor-dashboard .modal-footer .btn-danger:hover {
+    background-color: #ad503d !important;
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 768px) {
+
+    .doctor-dashboard {
+        padding: 32px 14px 45px;
+    }
+
+    .doctor-dashboard-heading {
+        margin-bottom: 30px;
+    }
+
+    .doctor-dashboard-heading h2 {
+        font-size: 25px;
+    }
+
+    .doctor-dashboard-heading p {
+        font-size: 14px;
+    }
+
+    .doctor-info-card .card-body {
+        padding: 22px;
+    }
+
+    .doctor-info-card h4 {
+        font-size: 19px;
+    }
+
+    .doctor-appointments {
+        margin-top: 35px;
+    }
+
+    .doctor-appointments h3 {
+        font-size: 22px;
+    }
+
+    .doctor-appointment-card .card-body {
+        padding: 19px;
+    }
+
+    .doctor-stats {
+        padding: 20px;
+    }
+}
+
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 480px) {
+
+    .doctor-dashboard {
+        padding: 28px 10px 40px;
+    }
+
+    .doctor-dashboard-heading h2 {
+        font-size: 23px;
+    }
+
+    .doctor-dashboard-heading p {
+        font-size: 13px;
+    }
+
+    .doctor-info-card .card-body {
+        padding: 19px;
+    }
+
+    .doctor-info-card h4 {
+        font-size: 18px;
+    }
+
+    .doctor-info-card p {
+        font-size: 13px;
+    }
+
+    .doctor-info-card .d-flex {
+        flex-wrap: wrap;
+    }
+
+    .doctor-appointment-card h5 {
+        font-size: 17px;
+    }
+
+    .doctor-appointment-card p {
+        font-size: 12px;
+    }
+
+    .doctor-appointment-card .btn {
+        font-size: 10px;
+
+        padding: 7px 10px;
+    }
+
+    .doctor-stats {
+        padding: 16px;
+    }
+
+    .stats-header {
+        align-items: flex-start;
+    }
+
+    .stats-header .form-select {
+        width: 100% !important;
+    }
+
+    .stat-summary-card h4 {
+        font-size: 23px;
+    }
+
+    .doctor-dashboard .modal-body {
+        padding: 18px;
+    }
+
+    .doctor-dashboard .modal-footer {
+        padding: 12px 15px;
+    }
+}

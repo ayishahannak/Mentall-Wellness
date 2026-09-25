@@ -1,0 +1,65 @@
+.mindcare-footer {
+    background-color: #ede7f6;
+    color: #5a5a68;
+    padding: 50px 0 20px;
+    margin-top: 40px;
+}
+
+.footer-section {
+    margin-bottom: 25px;
+}
+
+.footer-section h3 {
+    color: #6a4fa0;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.footer-section h4 {
+    color: #3c9e6c;
+    font-size: 15px;
+    margin-bottom: 14px;
+}
+
+.footer-section p {
+    color: #6d6d7d;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.footer-section a {
+    display: block;
+    color: #6d6d7d;
+    font-size: 14px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.footer-section a:hover {
+    color: #6a4fa0;
+}
+
+.footer-bottom {
+    border-top: 1px solid #d9cdf0;
+    text-align: center;
+    padding-top: 18px;
+    margin-top: 10px;
+}
+
+.footer-bottom p {
+    color: #8a8a9a;
+    font-size: 13px;
+    margin: 4px 0;
+    color: #6d6d7d;
+}
+
+@media (max-width: 768px) {
+    .mindcare-footer {
+        text-align: center;
+    }
+
+    .footer-section a {
+        display: inline-block;
+        margin: 0 10px 10px;
+    }
+}

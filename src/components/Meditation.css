@@ -1,0 +1,61 @@
+
+
+.meditation-page {
+    background-color: #f8f5ef;
+    padding: 40px 20px;
+}
+
+
+
+.meditation-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.meditation-title h1 {
+    color: #293b45;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.meditation-title p {
+    color: #66736f;
+    font-size: 15px;
+}
+
+
+
+.video-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.video-item {
+    background-color: #ffffff;
+    border-radius: 14px;
+    border: 1px solid #e8e2d9;
+    overflow: hidden;
+}
+
+.video-box {
+    background-color: #000;
+}
+
+.video-text {
+    padding: 18px;
+}
+
+.video-text h3 {
+    color: #293b45;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.video-text p {
+    color: #66736f;
+    font-size: 13px;
+    line-height: 1.6;
+}

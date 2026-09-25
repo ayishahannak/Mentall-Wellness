@@ -1,0 +1,430 @@
+.admin-dashboard {
+    min-height: calc(100vh - 70px);
+    background-color: #f8f5ef;
+    padding: 50px 20px;
+}
+
+.admin-container {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+
+/* =================================
+   HEADER
+================================= */
+
+.admin-header {
+    margin-bottom: 25px;
+}
+
+.admin-header span {
+    color: #b56b52;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.admin-header h1 {
+    margin: 6px 0;
+    color: #293b45;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.admin-header p {
+    margin: 0;
+    color: #69736f;
+    font-size: 14px;
+}
+
+
+/* =================================
+   ADMIN SUMMARY
+================================= */
+
+.admin-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.admin-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e6e0d9;
+    border-radius: 12px;
+
+    padding: 18px 22px;
+}
+
+.admin-row strong:first-child {
+    color: #293b45;
+    font-size: 15px;
+}
+
+.admin-row strong:last-child {
+    color: #477d72;
+    font-size: 21px;
+}
+
+
+/* =================================
+   MANAGE DOCTORS
+================================= */
+
+.admin-doctors-section {
+    margin-top: 10px;
+}
+
+.admin-doctors-section h2 {
+    color: #293b45;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.admin-doctors-section > p {
+    color: #69736f;
+    font-size: 14px;
+}
+
+
+/* =================================
+   DOCTOR CARD LIST
+================================= */
+
+.admin-doctor-list {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+
+/* =================================
+   DOCTOR CARD
+================================= */
+
+.admin-doctor-row {
+    background-color: #fff1e6;
+
+    border: 1px solid #efd8c7;
+
+    border-radius: 14px;
+
+    padding: 20px;
+
+    box-shadow:
+        0 4px 12px rgba(90, 70, 55, 0.06);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.admin-doctor-row:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 7px 18px rgba(90, 70, 55, 0.10);
+}
+
+
+/* =================================
+   DOCTOR DETAILS
+================================= */
+
+.admin-doctor-row strong {
+    display: block;
+
+    color: #3d302b;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    margin-bottom: 7px;
+}
+
+.admin-doctor-row p {
+    color: #594b45;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    margin-bottom: 5px;
+}
+
+.admin-doctor-row small {
+    display: block;
+
+    color: #6b574e;
+
+    font-size: 12px;
+
+    margin-bottom: 16px;
+}
+
+
+/* =================================
+   REMOVE DOCTOR BUTTON
+================================= */
+
+.admin-doctor-row .btn-danger {
+    width: 100%;
+
+    background-color: #c9654f !important;
+
+    color: #ffffff !important;
+
+    border: none !important;
+
+    border-radius: 8px;
+
+    padding: 9px 14px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    box-shadow: none !important;
+}
+
+.admin-doctor-row .btn-danger:hover {
+    background-color: #ad503d !important;
+}
+
+
+/* =================================
+   REMOVE DOCTOR MODAL
+================================= */
+
+.admin-dashboard .modal-content {
+    border: none;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 12px 35px rgba(60, 50, 45, 0.15);
+}
+
+
+/* =================================
+   MODAL HEADER
+================================= */
+
+.admin-dashboard .modal-header {
+    background-color: #fff1e6;
+
+    border-bottom: 1px solid #efd8c7;
+
+    padding: 18px 22px;
+}
+
+.admin-dashboard .modal-title {
+    color: #4b3328;
+
+    font-size: 19px;
+
+    font-weight: 700;
+}
+
+
+/* =================================
+   MODAL BODY
+================================= */
+
+.admin-dashboard .modal-body {
+    background-color: #ffffff;
+
+    padding: 22px;
+
+    color: #594b45;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+.admin-dashboard .modal-body strong {
+    color: #3d302b;
+}
+
+
+/* =================================
+   WARNING MESSAGE
+================================= */
+
+.admin-dashboard .modal-body .alert-warning {
+    background-color: #fff7df;
+
+    border: 1px solid #eadcb9;
+
+    border-radius: 10px;
+
+    color: #665536;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =================================
+   REASON LABEL
+================================= */
+
+.admin-dashboard .modal-body .form-label {
+    color: #3d302b;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+/* =================================
+   REASON TEXTAREA
+================================= */
+
+.admin-dashboard .modal-body .form-control {
+    border: 1px solid #ddd2c9;
+
+    border-radius: 9px;
+
+    color: #3d302b;
+
+    font-size: 13px;
+
+    box-shadow: none;
+}
+
+.admin-dashboard .modal-body .form-control:focus {
+    border-color: #c99b87;
+
+    box-shadow:
+        0 0 0 3px rgba(201, 155, 135, 0.12);
+}
+
+.admin-dashboard .modal-body .form-control::placeholder {
+    color: #9a8c84;
+}
+
+
+/* =================================
+   MODAL FOOTER
+================================= */
+
+.admin-dashboard .modal-footer {
+    background-color: #fffaf6;
+
+    border-top: 1px solid #eee1d7;
+
+    padding: 14px 22px;
+}
+
+
+/* =================================
+   MODAL CANCEL BUTTON
+================================= */
+
+.admin-dashboard .modal-footer .btn-secondary {
+    background-color: #ffffff !important;
+
+    color: #594b45 !important;
+
+    border: 1px solid #d9cec7 !important;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    box-shadow: none !important;
+}
+
+.admin-dashboard .modal-footer .btn-secondary:hover {
+    background-color: #f8f5f2 !important;
+
+    color: #3d302b !important;
+}
+
+
+/* =================================
+   MODAL REMOVE BUTTON
+================================= */
+
+.admin-dashboard .modal-footer .btn-danger {
+    background-color: #c9654f !important;
+
+    color: #ffffff !important;
+
+    border: none !important;
+
+    border-radius: 8px;
+
+    padding: 9px 16px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    box-shadow: none !important;
+}
+
+.admin-dashboard .modal-footer .btn-danger:hover {
+    background-color: #ad503d !important;
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+    .admin-dashboard {
+        padding: 35px 15px;
+    }
+
+    .admin-container {
+        max-width: 100%;
+    }
+
+    .admin-header h1 {
+        font-size: 26px;
+    }
+
+    .admin-header p {
+        font-size: 13px;
+    }
+
+    .admin-doctor-list {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-doctor-row {
+        padding: 18px;
+    }
+
+    .admin-row {
+        padding: 16px 18px;
+    }
+
+    .admin-row strong:first-child {
+        font-size: 14px;
+    }
+
+    .admin-row strong:last-child {
+        font-size: 19px;
+    }
+}

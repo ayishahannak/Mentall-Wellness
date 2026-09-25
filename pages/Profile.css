@@ -1,0 +1,455 @@
+
+
+.profile-page {
+    min-height: 100vh;
+    padding: 35px 0 60px;
+    background: #f5f6fa;
+}
+
+
+/* ================================
+   PROFILE CARD
+================================ */
+
+.profile-card {
+    max-width: 470px;
+    margin: 0 auto;
+
+    border: none !important;
+    border-radius: 18px !important;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    box-shadow: 0 7px 22px rgba(45, 50, 70, 0.12) !important;
+}
+
+
+/* Profile Header */
+
+.profile-top {
+    padding: 25px 20px 22px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #6860a0,
+        #8177b5
+    );
+
+    color: white;
+}
+
+
+/* Profile Avatar */
+
+.profile-avatar {
+    width: 68px;
+    height: 68px;
+
+    margin: 0 auto;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+
+    color: #6860a0;
+
+    font-size: 27px;
+    font-weight: 700;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Profile Name */
+
+.profile-name {
+    margin: 12px 0 0;
+
+    font-size: 21px;
+    font-weight: 650;
+
+    color: #ffffff;
+}
+
+
+/* ================================
+   PROFILE DETAILS
+================================ */
+
+.profile-details {
+    padding: 20px 24px 22px;
+}
+
+.profile-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 11px 13px;
+
+    margin-bottom: 8px;
+
+    border-radius: 9px;
+
+    background: #f7f7fb;
+}
+
+.profile-label {
+    font-size: 13px;
+    font-weight: 500;
+
+    color: #626272;
+}
+
+.profile-value {
+    max-width: 65%;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #292936;
+
+    text-align: right;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* ================================
+   APPOINTMENTS
+================================ */
+
+.appointments-section {
+    max-width: 900px;
+    margin: 35px auto 0;
+}
+
+.appointments-title {
+    text-align: center;
+
+    font-size: 22px;
+    font-weight: 600;
+
+    color: #293b45;
+
+    margin-bottom: 20px;
+}
+
+
+/* Appointment Card */
+
+.appointment-card {
+    height: 100%;
+
+    border: 1px solid #dddddd !important;
+    border-radius: 8px !important;
+
+    background: #ffffff;
+
+    box-shadow: none !important;
+}
+
+.appointment-body {
+    padding: 16px;
+}
+
+
+/* Doctor Name */
+
+.appointment-doctor {
+    margin: 0 0 12px;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    color: #293b45;
+}
+
+
+/* Appointment Details */
+
+.appointment-line {
+    margin-bottom: 8px;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    color: #555555;
+}
+
+.appointment-line strong {
+    color: #293b45;
+
+    font-weight: 600;
+}
+
+
+/* ================================
+   FEE
+================================ */
+
+.appointment-fee {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 10px;
+    padding-top: 10px;
+
+    border-top: 1px solid #eeeeee;
+}
+
+.fee-label {
+    font-size: 13px;
+
+    color: #555555;
+}
+
+.fee-value {
+    font-size: 15px;
+    font-weight: 600;
+
+    color: #293b45;
+}
+
+
+/* ================================
+   STATUS
+================================ */
+
+.appointment-status {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding: 3px 9px;
+
+    border-radius: 4px;
+
+    background: #e8f3ee;
+
+    color: #477d72;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* ================================
+   CANCEL APPOINTMENT
+================================ */
+
+.cancel-appointment-btn {
+    width: 100%;
+
+    margin-top: 12px;
+
+    padding: 7px;
+
+    border: 1px solid #d47768;
+    border-radius: 6px;
+
+    background: #ffffff;
+
+    color: #c76555;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.cancel-appointment-btn:hover {
+    background: #d47768;
+
+    color: #ffffff;
+}
+
+
+/* ================================
+   NO APPOINTMENTS
+================================ */
+
+.no-appointments {
+    max-width: 470px;
+
+    margin: 0 auto;
+
+    padding: 20px;
+
+    text-align: center;
+
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #555555;
+
+    font-size: 14px;
+}
+
+
+/* ================================
+   CANCEL MODAL
+================================ */
+
+.small-cancel-modal {
+    max-width: 360px;
+
+    margin: auto;
+}
+
+.small-cancel-modal .modal-content {
+    border: none;
+
+    border-radius: 10px;
+}
+
+.small-cancel-modal .modal-header {
+    padding: 10px 15px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.small-cancel-modal .modal-title {
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: #293b45;
+}
+
+.small-cancel-modal .modal-body {
+    padding: 15px;
+}
+
+.cancel-modal-content {
+    text-align: center;
+}
+
+.cancel-modal-content p {
+    margin: 0;
+
+    font-size: 13px;
+
+    color: #555555;
+
+    line-height: 1.5;
+}
+
+.cancel-modal-content strong {
+    color: #293b45;
+}
+
+.small-cancel-modal .modal-footer {
+    padding: 9px 15px;
+
+    border-top: 1px solid #eeeeee;
+}
+
+
+/* No Button */
+
+.cancel-no-btn {
+    padding: 6px 16px;
+
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+
+    background: #ffffff;
+
+    color: #555555;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+.cancel-no-btn:hover {
+    background: #f3f3f3;
+}
+
+
+/* Yes Cancel Button */
+
+.cancel-yes-btn {
+    padding: 6px 15px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #c96f52;
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.cancel-yes-btn:hover {
+    background: #b85f45;
+}
+
+.status-completed {
+    color: #1a4d8f;
+    background-color: #d6e6ff;
+}
+
+.status-cancelled {
+    color: #a12525;
+    background-color: #fbdada;
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 768px) {
+
+    .profile-page {
+        padding: 25px 12px 45px;
+    }
+
+    .profile-card {
+        max-width: 100%;
+    }
+
+    .profile-details {
+        padding: 17px;
+    }
+
+    .appointments-section {
+        margin-top: 30px;
+    }
+
+    .appointments-title {
+        font-size: 21px;
+    }
+
+    .appointment-body {
+        padding: 15px;
+    }
+
+}
+
+.status-pending {
+    color: #b8860b;
+    background-color: #fff3cd;
+}
+
+.status-confirmed {
+    color: #1e7e34;
+    background-color: #d4edda;
+}
