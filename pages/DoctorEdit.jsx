@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 
 import {
@@ -44,6 +43,21 @@ const DoctorEdit = () => {
 
 
     // =========================
+    // AVAILABLE DAYS
+    // =========================
+
+    const days = [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+    ];
+
+
+    // =========================
     // GET LOGGED-IN DOCTOR
     // =========================
 
@@ -74,7 +88,10 @@ const DoctorEdit = () => {
     // =========================
 
     const doctor = doctors.find(
-        (d) => d.email === user.email
+        (d) =>
+            d.id === user.id ||
+            d.email?.toLowerCase() ===
+                user.email?.toLowerCase()
     );
 
 
@@ -123,15 +140,30 @@ const DoctorEdit = () => {
             .string()
             .required("Enter qualification"),
 
-        time: yup
+        timePeriod1: yup
             .string()
-            .required("Enter available hours"),
+            .required("Enter Time Period 1"),
+
+        timePeriod2: yup
+            .string()
+            .required("Enter Time Period 2"),
 
         fee: yup
             .number()
             .typeError("Fee must be a number")
             .positive("Fee must be greater than 0")
             .required("Enter consultation fee"),
+
+        availableDays: yup
+            .array()
+            .min(1, "Select at least one available day"),
+
+        maxAppointmentsPerDay: yup
+            .number()
+            .typeError("Maximum patients must be a number")
+            .integer("Enter a whole number")
+            .min(1, "Maximum patients must be at least 1")
+            .required("Enter maximum patients per day"),
 
     });
 
@@ -142,11 +174,7 @@ const DoctorEdit = () => {
 
     const handleEditDoctor = (values) => {
 
-        // Store values temporarily
-
         setPendingValues(values);
-
-        // Open confirmation modal
 
         setShowModal(true);
     };
@@ -177,11 +205,30 @@ const DoctorEdit = () => {
                 qualification:
                     pendingValues.qualification,
 
+                // =========================
+                // TWO TIME PERIODS
+                // =========================
+
+                timePeriod1:
+                    pendingValues.timePeriod1,
+
+                timePeriod2:
+                    pendingValues.timePeriod2,
+
+                // Keep combined time also
                 time:
-                    pendingValues.time,
+                    `${pendingValues.timePeriod1} | ${pendingValues.timePeriod2}`,
 
                 fee:
                     `₹${pendingValues.fee}`,
+
+                availableDays:
+                    pendingValues.availableDays,
+
+                maxAppointmentsPerDay:
+                    Number(
+                        pendingValues.maxAppointmentsPerDay
+                    ),
 
             })
         );
@@ -213,7 +260,7 @@ const DoctorEdit = () => {
 
             <Row className="justify-content-center">
 
-                <Col md={5}>
+                <Col md={7}>
 
                     {/* =========================
                         TITLE
@@ -241,12 +288,37 @@ const DoctorEdit = () => {
                             qualification:
                                 doctor.qualification || "",
 
-                            time:
-                                doctor.time || "",
+
+                            // =========================
+                            // TIME PERIOD 1
+                            // =========================
+
+                            timePeriod1:
+                                doctor.timePeriod1 || "",
+
+
+                            // =========================
+                            // TIME PERIOD 2
+                            // =========================
+
+                            timePeriod2:
+                                doctor.timePeriod2 || "",
+
 
                             fee:
                                 doctor.fee
                                     ?.replace("₹", "") || "",
+
+                            availableDays:
+                                Array.isArray(
+                                    doctor.availableDays
+                                )
+                                    ? doctor.availableDays
+                                    : [],
+
+                            maxAppointmentsPerDay:
+                                doctor.maxAppointmentsPerDay ||
+                                "",
 
                         }}
 
@@ -260,6 +332,7 @@ const DoctorEdit = () => {
                             values,
                             touched,
                             errors,
+                            setFieldValue,
 
                         }) => (
 
@@ -358,29 +431,187 @@ const DoctorEdit = () => {
 
 
                                 {/* =========================
-                                    AVAILABLE TIME
+                                    TIME PERIOD 1
                                 ========================= */}
 
                                 <Form.Group className="mb-3">
 
                                     <Form.Label>
-                                        Available Hours
+                                        Time Period 1
                                     </Form.Label>
 
                                     <Form.Control
                                         type="text"
-                                        name="time"
-                                        value={values.time}
+                                        name="timePeriod1"
+                                     
+                                        value={
+                                            values.timePeriod1
+                                        }
                                         onChange={handleChange}
                                         onBlur={handleBlur}
                                         isInvalid={
-                                            touched.time &&
-                                            !!errors.time
+                                            touched.timePeriod1 &&
+                                            !!errors.timePeriod1
                                         }
                                     />
 
                                     <Form.Control.Feedback type="invalid">
-                                        {errors.time}
+                                        {errors.timePeriod1}
+                                    </Form.Control.Feedback>
+
+                                </Form.Group>
+
+
+                                {/* =========================
+                                    TIME PERIOD 2
+                                ========================= */}
+
+                                <Form.Group className="mb-3">
+
+                                    <Form.Label>
+                                        Time Period 2
+                                    </Form.Label>
+
+                                    <Form.Control
+                                        type="text"
+                                        name="timePeriod2"
+                                       
+                                        value={
+                                            values.timePeriod2
+                                        }
+                                        onChange={handleChange}
+                                        onBlur={handleBlur}
+                                        isInvalid={
+                                            touched.timePeriod2 &&
+                                            !!errors.timePeriod2
+                                        }
+                                    />
+
+                                    <Form.Control.Feedback type="invalid">
+                                        {errors.timePeriod2}
+                                    </Form.Control.Feedback>
+
+                                </Form.Group>
+
+
+                                {/* =========================
+                                    AVAILABLE DAYS
+                                ========================= */}
+
+                                <Form.Group className="mb-3">
+
+                                    <Form.Label>
+                                        Available Days
+                                    </Form.Label>
+
+                                    <div className="border rounded p-3">
+
+                                        <Row>
+
+                                            {days.map(
+                                                (day) => (
+
+                                                    <Col
+                                                        xs={6}
+                                                        md={4}
+                                                        key={day}
+                                                        className="mb-2"
+                                                    >
+
+                                                        <Form.Check
+                                                            type="checkbox"
+                                                            id={`edit-${day}`}
+                                                            label={day}
+                                                            checked={
+                                                                values.availableDays.includes(
+                                                                    day
+                                                                )
+                                                            }
+                                                            onChange={() => {
+
+                                                                const currentDays =
+                                                                    values.availableDays ||
+                                                                    [];
+
+                                                                if (
+                                                                    currentDays.includes(
+                                                                        day
+                                                                    )
+                                                                ) {
+
+                                                                    setFieldValue(
+                                                                        "availableDays",
+                                                                        currentDays.filter(
+                                                                            (
+                                                                                selectedDay
+                                                                            ) =>
+                                                                                selectedDay !==
+                                                                                day
+                                                                        )
+                                                                    );
+
+                                                                } else {
+
+                                                                    setFieldValue(
+                                                                        "availableDays",
+                                                                        [
+                                                                            ...currentDays,
+                                                                            day
+                                                                        ]
+                                                                    );
+
+                                                                }
+
+                                                            }}
+                                                        />
+
+                                                    </Col>
+
+                                                )
+                                            )}
+
+                                        </Row>
+
+                                    </div>
+
+                                    {errors.availableDays && (
+                                        <div className="text-danger small mt-1">
+                                            {errors.availableDays}
+                                        </div>
+                                    )}
+
+                                </Form.Group>
+
+
+                                {/* =========================
+                                    MAXIMUM PATIENTS
+                                ========================= */}
+
+                                <Form.Group className="mb-3">
+
+                                    <Form.Label>
+                                        Maximum Patients Per Day
+                                    </Form.Label>
+
+                                    <Form.Control
+                                        type="number"
+                                        name="maxAppointmentsPerDay"
+                                        min="1"
+                                        value={
+                                            values.maxAppointmentsPerDay
+                                        }
+                                        onChange={handleChange}
+                                        onBlur={handleBlur}
+                                        isInvalid={
+                                            touched.maxAppointmentsPerDay &&
+                                            !!errors.maxAppointmentsPerDay
+                                        }
+                                    />
+
+                                    <Form.Control.Feedback type="invalid">
+                                        {
+                                            errors.maxAppointmentsPerDay
+                                        }
                                     </Form.Control.Feedback>
 
                                 </Form.Group>
@@ -524,4 +755,3 @@ const NavigateToLogin = ({ navigate }) => {
 
 
 export default DoctorEdit;
-

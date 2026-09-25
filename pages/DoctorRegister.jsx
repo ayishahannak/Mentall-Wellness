@@ -27,18 +27,12 @@ const DoctorRegister = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    /*
-     * Get existing users from Redux.
-     */
+    
     const { users } = useSelector(
         (state) => state.userState
     );
 
-    /*
-     * Doctor basic registration
-     * information saved from the
-     * first registration page.
-     */
+   
     const doctorAccount =
         JSON.parse(
             localStorage.getItem(
@@ -80,9 +74,7 @@ const DoctorRegister = () => {
                 "Enter first available time period"
             ),
 
-        /*
-         * Period 2 is optional.
-         */
+       
         timePeriod2: yup.string(),
 
         maxAppointmentsPerDay: yup
@@ -117,12 +109,7 @@ const DoctorRegister = () => {
         values
     ) => {
 
-        /*
-         * =========================
-         * CHECK DOCTOR ACCOUNT
-         * =========================
-         */
-
+       
         if (!doctorAccount) {
 
             toast.error(
@@ -143,14 +130,7 @@ const DoctorRegister = () => {
                 ? `${values.timePeriod1} / ${values.timePeriod2}`
                 : values.timePeriod1;
 
-        /*
-         * =========================
-         * FIND EXISTING USER
-         * =========================
-         *
-         * This checks whether the email
-         * was already used before.
-         */
+        
         const existingUser =
             (users || []).find(
                 (user) =>
@@ -158,19 +138,10 @@ const DoctorRegister = () => {
                     doctorAccount.email?.toLowerCase()
             );
 
-        /*
-         * =========================
-         * EXISTING USER
-         * =========================
-         */
 
         if (existingUser) {
 
-            /*
-             * If the existing account is
-             * still active, don't create
-             * another account.
-             */
+            
             if (
                 existingUser.status !== false
             ) {
@@ -182,11 +153,7 @@ const DoctorRegister = () => {
                 return;
             }
 
-            /*
-             * Only an inactive Doctor
-             * account can be reactivated
-             * through Doctor Registration.
-             */
+           
             if (
                 existingUser.role !==
                 "Doctor"
@@ -533,7 +500,7 @@ const DoctorRegister = () => {
                                         <Form.Control
                                             type="text"
                                             name="qualification"
-                                            placeholder="Example: MBBS, MD Psychiatry"
+                                           
                                             value={
                                                 values.qualification
                                             }
@@ -638,7 +605,7 @@ const DoctorRegister = () => {
                                         <Form.Control
                                             type="text"
                                             name="timePeriod1"
-                                            placeholder="Example: 09:00 AM - 12:00 PM"
+                                           
                                             value={
                                                 values.timePeriod1
                                             }
@@ -681,7 +648,7 @@ const DoctorRegister = () => {
                                         <Form.Control
                                             type="text"
                                             name="timePeriod2"
-                                            placeholder="Example: 04:00 PM - 07:00 PM"
+                                           
                                             value={
                                                 values.timePeriod2
                                             }
@@ -708,7 +675,7 @@ const DoctorRegister = () => {
                                             type="number"
                                             name="maxAppointmentsPerDay"
                                             min="1"
-                                            placeholder="Example: 10"
+                                            
                                             value={
                                                 values.maxAppointmentsPerDay
                                             }

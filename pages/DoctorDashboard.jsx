@@ -1167,12 +1167,12 @@ function DoctorDashboard() {
                         appointment?
                     </p>
 
-                    <p className="text-muted mb-0">
+                    {/* <p className="text-muted mb-0">
                         The patient will be
                         notified that the
                         appointment was
                         cancelled.
-                    </p>
+                    </p> */}
 
                 </Modal.Body>
 
@@ -1238,7 +1238,7 @@ function DoctorDashboard() {
                         the Doctors page?
                     </p>
 
-                    <p className="text-muted">
+                    {/* <p className="text-muted">
                         Your doctor account
                         will become inactive
                         and you will be logged
@@ -1252,7 +1252,7 @@ function DoctorDashboard() {
                         Pending and confirmed
                         appointments will be
                         cancelled.
-                    </p>
+                    </p> */}
 
                 </Modal.Body>
 
