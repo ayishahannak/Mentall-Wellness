@@ -4,7 +4,7 @@ import { updaterole, updateStatus } from "../redux/userSlice";
 import { Navigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
-function ListUsers() {
+function ListUser() {
     const { users, user } = useSelector((state) => state.userState);
     const dispatch = useDispatch();
 
@@ -78,4 +78,4 @@ function ListUsers() {
     );
 }
 
-export default ListUsers;
+export default ListUser;

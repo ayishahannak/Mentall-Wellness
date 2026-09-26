@@ -6,9 +6,8 @@ import Register from '../pages/Registration';
 import Login from '../pages/Login';
 import Header from './components/Header';
 import Profile from '../pages/Profile';
-import EditUser from './user/Edituser';
-import ListUsers from './user/Listuser';
-import ProtectRoute from './components/Protectroute';
+
+import ProtectRoute from './components/ProtectRoute';
 import Forbidden from '../pages/Forbidden';
 
 import About from '../pages/About';
@@ -24,6 +23,7 @@ import Journal from '../pages/Journal';
 import AdminDashboard from './components/AdminDashboard';
 import DoctorRegister from '../pages/DoctorRegister';
 import DoctorDashboard from '../pages/DoctorDashboard';
+import ListUser from './user/Listuser';
 
 
 
@@ -61,7 +61,7 @@ function App() {
 />
           <Route path="/user/list-users" element={
             <ProtectRoute requiredRole={["Admin"]}>
-              <ListUsers />
+              <ListUser />
             </ProtectRoute>
           }
           />
