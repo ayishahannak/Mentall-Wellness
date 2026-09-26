@@ -71,10 +71,7 @@ function App() {
             </ProtectRoute>
           }
           />
-          <Route path="/user/edit-user/:id" element={
-              <ProtectRoute requiredRole={["Admin"]}>
-                <EditUser />
-              </ProtectRoute>} />
+
 
           <Route path="/forbidden" element={<Forbidden />}/>
           <Route path="/" element={<Home />} />
