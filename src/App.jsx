@@ -23,7 +23,7 @@ import Journal from '../pages/Journal';
 import AdminDashboard from './components/AdminDashboard';
 import DoctorRegister from '../pages/DoctorRegister';
 import DoctorDashboard from '../pages/DoctorDashboard';
-import ListUser from './user/Listuser';
+import ListUser from './user/ListUser';
 
 
 
